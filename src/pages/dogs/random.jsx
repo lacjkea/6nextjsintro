@@ -15,7 +15,9 @@ export async function getServerSideProps() {
   const api = "https://dog.ceo/api/breeds/image/random";
   const res = await fetch(api);
   const data = await res.json();
-  console.log(data); /* not "working" */
+  console.log(
+    data
+  ); /* not "working" /SSR - it's shown in the terminal locally */
 
   return {
     props: {
