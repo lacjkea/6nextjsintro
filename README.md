@@ -40,3 +40,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## LACJ
 
 Check rendering.md
+Also... To do:
+Cool stuff we didn't look in to
+
+- Font optimization: https://nextjs.org/docs/basic-features/font-optimization
+- Static HTML export: https://nextjs.org/docs/advanced-features/static-html-export
+- Custom error page: https://nextjs.org/docs/advanced-features/custom-error-page
+
+from https://slides.com/mathiasdahljensen/deck-613e11#/15/1
