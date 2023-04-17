@@ -15,6 +15,18 @@ export default function henry() {
   );
 }
 
+export async function getStaticProps() {
+  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/henry";
+  const res = await fetch(api);
+  const data = await redirect.json();
+
+  return {
+    props: {
+      data: "data",
+    },
+  };
+}
+
 /*Routes
 https://nextjs.org/docs/routing/introduction
 

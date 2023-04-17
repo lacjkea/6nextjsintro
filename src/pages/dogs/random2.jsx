@@ -1,3 +1,4 @@
+//getStaticProps
 // export default function RandomDog({ imgUrl, data }) {
 export default function RandomDog({ imgUrl }) {
   console.log(imgUrl);
@@ -10,7 +11,7 @@ export default function RandomDog({ imgUrl }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   /* We can do secure stuff down here - I think - server-side */
   const api = "https://dog.ceo/api/breeds/image/random";
   const res = await fetch(api);
