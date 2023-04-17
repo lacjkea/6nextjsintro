@@ -1,9 +1,13 @@
 import Anchor from "@/components/Anchor";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Welcome to the dog page</title>
+      </Head>
       <h1>Hello</h1>
       {/*   <Link prefetch={false} href="/dogs/henry">
         {/* npm run build & look at network - it's prefetching somethings if we don't add this, but still it'll prefetch this on hover */}
