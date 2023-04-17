@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function henry({ data }) {
   const { content } = data;
-  console.log("content Henry", content);
+  // console.log("content Henry", content);
   return (
     <>
       <Head>{data.title}</Head>
@@ -31,7 +31,7 @@ export async function getStaticProps() {
   const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/henry";
   const res = await fetch(api);
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
 
   return {
     props: {

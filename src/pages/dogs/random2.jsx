@@ -1,7 +1,7 @@
 //getStaticProps
 // export default function RandomDog({ imgUrl, data }) {
 export default function RandomDog({ imgUrl }) {
-  console.log(imgUrl);
+  //   console.log(imgUrl);
   //   console.log("data", data);
   return (
     <>
@@ -16,7 +16,7 @@ export async function getStaticProps() {
   const api = "https://dog.ceo/api/breeds/image/random";
   const res = await fetch(api);
   const data = await res.json();
-  console.log(data); /* not "working" */
+  //   console.log(data); /* not "working" */
 
   return {
     props: {

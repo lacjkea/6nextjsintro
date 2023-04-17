@@ -1,6 +1,6 @@
 // export default function RandomDog({ imgUrl, data }) {
 export default function RandomDog({ imgUrl }) {
-  console.log(imgUrl);
+  //   console.log(imgUrl);
   //   console.log("data", data);
   return (
     <>
@@ -15,7 +15,7 @@ export async function getServerSideProps() {
   const api = "https://dog.ceo/api/breeds/image/random";
   const res = await fetch(api);
   const data = await res.json();
-  console.log(
+  /*  console.log(
     data
   ); /* not "working" /SSR - it's shown in the terminal locally */
 
