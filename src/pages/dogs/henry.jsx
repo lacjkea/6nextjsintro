@@ -1,11 +1,23 @@
 import Image from "next/image";
+import Head from "next/head";
 
-export default function henry() {
+export default function henry({ data }) {
+  const { content } = data;
+  console.log("content", content);
   return (
     <>
-      <h1>Henry</h1>
+      <Head>{data.title}</Head>
+      <h1>{content.heading}</h1>
+      <p>{content.text}</p>
       <Image
-        src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e"
+        src={content.image.src}
+        alt={content.image.alt}
+        width={content.image.width}
+        height={content.image.height}
+        sizes="(max-width:750px) 100vw, 750px"
+      />
+      <Image
+        src={"https://images.unsplash.com/photo-1583511655857-d19b40a7a54e"}
         alt="Cute dog"
         width="4240"
         height="2832"
@@ -23,7 +35,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data: "data",
+      data: data,
     },
   };
 }
