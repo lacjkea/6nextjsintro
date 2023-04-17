@@ -3,7 +3,6 @@ export default function Layout({ children }) {
   return (
     <>
       <nav>
-        {" "}
         <ul>
           <li>
             <Anchor href="/">Home</Anchor>
@@ -19,6 +18,10 @@ export default function Layout({ children }) {
     </>
   );
 }
+/* Links
+Layouts
+
+https://nextjs.org/docs/basic-features/layouts*/
 
 // components/Layout.js
 /* 
