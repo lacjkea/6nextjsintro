@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function henry({ data }) {
   const { content } = data;
-  console.log("content", content);
+  console.log("content Henry", content);
   return (
     <>
       <Head>{data.title}</Head>
