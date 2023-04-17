@@ -18,7 +18,8 @@ export default function henry() {
 export async function getStaticProps() {
   const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/henry";
   const res = await fetch(api);
-  const data = await redirect.json();
+  const data = await res.json();
+  console.log(data);
 
   return {
     props: {
