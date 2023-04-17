@@ -1,15 +1,24 @@
 import Anchor from "./Anchor";
-export default function Layout({ children }) {
+export default function Layout({ children, navData }) {
   return (
     <>
       <nav>
         <ul>
-          <li>
+          {navData.map((entry) => {
+            console.log(entry);
+            return (
+              <li key={entry.id}>
+                <Anchor href={`/dogs/${entry.slug}`}>{entry.title}</Anchor>
+              </li>
+            );
+          })}
+
+          {/*      <li>
             <Anchor href="/">Home</Anchor>
           </li>
           <li>
             <Anchor href="/dogs/henry">Henry</Anchor>
-          </li>
+          </li> */}
         </ul>
       </nav>
       {/*content */}
