@@ -9,6 +9,7 @@ export default function henry() {
         alt="Cute dog"
         width="4240"
         height="2832"
+        sizes="(max-width:750px) 100vw, 750px"
       />
     </>
   );
