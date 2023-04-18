@@ -51,7 +51,7 @@ export async function getStaticProps(context) {
 /list all pages that should be build
 /copy-paste moment untill it works as needed */
 export async function getStaticPaths() {
-  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs";
+  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/";
   const res = await fetch(api);
   const data = await res.json();
 
