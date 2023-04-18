@@ -23,10 +23,13 @@ export default function henry({ data }) {
         height="2832"
         sizes="(max-width:750px) 100vw, 750px"
       />
+      {/*      <Image {...content.image} sizes="(max-width:750px) 100vw, 750px" /> */}
     </>
   );
 }
 
+//only running DB-REQUEST once
+//runs on build time (looks like Vue)
 export async function getStaticProps() {
   const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/henry";
   const res = await fetch(api);
@@ -37,6 +40,9 @@ export async function getStaticProps() {
     props: {
       data: data,
     },
+    /*    props: {
+      data: data,
+    }, */
   };
 }
 
