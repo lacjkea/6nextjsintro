@@ -28,7 +28,7 @@ export async function getStaticProps(context) {
   //console.log(context);
   //console.log("context.param.slug", context.params.slug); //see terminal
   const slug = context.params.slug;
-  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs" + slug;
+  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/" + slug;
   const res = await fetch(api);
   //   console.log(res.status);
   if (res.status != 200) {
