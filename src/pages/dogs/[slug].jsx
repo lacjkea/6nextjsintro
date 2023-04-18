@@ -28,7 +28,7 @@ export async function getStaticProps(context) {
   //console.log(context);
   //console.log("context.param.slug", context.params.slug); //see terminal
   const slug = context.params.slug;
-  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/" + slug;
+  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs" + slug;
   const res = await fetch(api);
   //   console.log(res.status);
   if (res.status != 200) {
@@ -51,7 +51,7 @@ export async function getStaticProps(context) {
 /list all pages that should be build
 /copy-paste moment untill it works as needed */
 export async function getStaticPaths() {
-  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/";
+  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs";
   const res = await fetch(api);
   const data = await res.json();
 
