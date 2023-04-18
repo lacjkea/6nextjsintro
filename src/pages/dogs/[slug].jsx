@@ -22,6 +22,28 @@ export default function Dogs({ data }) {
   );
 }
 
+/*
+/maybe this should come first?
+/list all pages that should be build
+/copy-paste moment untill it works as needed */
+export async function getStaticPaths() {
+  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/";
+  const res = await fetch(api);
+  const data = await res.json();
+
+  const paths = data.map((object) => {
+    //bliver vist nok lavet med `npm run build`
+    console.log("sluggy", object.slug);
+    return { params: { slug: object.slug } };
+  });
+
+  return {
+    // paths: [{ params: { slug: "henry" } }],
+    paths,
+    fallback: false,
+  };
+}
+
 //it's preferred to use getStaticProps
 export async function getStaticProps(context) {
   //error at first: we need to inform which routes should be build
@@ -43,27 +65,6 @@ export async function getStaticProps(context) {
     props: {
       data: data,
     },
-  };
-}
-
-//maybe this should come first?
-//list all pages that should be build
-//copy-paste moment untill it works as needed
-export async function getStaticPaths() {
-  const api = "https://bucolic-bombolone-857476.netlify.app/api/dogs/";
-  const res = await fetch(api);
-  const data = await res.json();
-
-  const paths = data.map((object) => {
-    //bliver vist nok lavet med `npm run build`
-    console.log("sluggy", object.slug);
-    return { params: { slug: object.slug } };
-  });
-
-  return {
-    // paths: [{ params: { slug: "henry" } }],
-    paths,
-    fallback: false,
   };
 }
 
